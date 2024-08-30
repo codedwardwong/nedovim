@@ -103,20 +103,71 @@
 -- 	},
 -- }
 
+-- return {
+-- 	{
+-- 		"folke/tokyonight.nvim",
+-- 		priority = 1000, -- make sure to load this before all the other start plugins
+-- 		config = function()
+-- 			local bg = "#011628"
+-- 			local bg_dark = "#011423"
+-- 			local bg_highlight = "#281447"
+-- 			local bg_search = "#0A64AC"
+-- 			local bg_visual = "#A9729D"
+-- 			local fg = "#E3C7FC"
+-- 			local fg_dark = "#ad4096"
+-- 			local fg_gutter = "#627E97"
+-- 			local border = "#d1cc34"
+-- 			local cursor = "#F1C4E0"
+--
+-- 			require("tokyonight").setup({
+-- 				style = "night",
+-- 				on_colors = function(colors)
+-- 					colors.bg = bg
+-- 					colors.bg_highlight = bg_highlight
+-- 					colors.bg_dark = bg_dark
+-- 					colors.bg_float = bg_dark
+-- 					colors.bg_sidebar = bg_dark
+-- 					colors.bg_statusline = bg_dark
+-- 					colors.bg_search = bg_search
+-- 					colors.bg_visual = bg_visual
+-- 					colors.border = border
+-- 					colors.fg = fg
+-- 					colors.fg_dark = fg_dark
+-- 					colors.fg_float = fg
+-- 					colors.fg_gutter = fg_gutter
+-- 					colors.fg_sidebar = fg_dark
+-- 					colors.cursor = cursor
+-- 					colors.green = "#e084c0"
+-- 					colors.cyan = "#e87731"
+-- 					colors.yellow = "#8897F4"
+-- 					-- colors.red = "#B52A5B"
+-- 					colors.red = "#f564c2"
+-- 					colors.magenta = "#f5f122"
+-- 					colors.blue = "#bd93f9"
+-- 					colors.white = "#F1C4E0"
+-- 				end,
+-- 			})
+--
+-- 			-- load the colorscheme here
+-- 			vim.cmd([[colorscheme tokyonight]])
+-- 		end,
+-- 	},
+-- }
+
 return {
 	{
 		"folke/tokyonight.nvim",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			local bg = "#011628"
+			local bg = "#171c18"
 			local bg_dark = "#011423"
 			local bg_highlight = "#281447"
-			local bg_search = "#0A64AC"
-			local bg_visual = "#E9729D"
-			local fg = "#E3C7FC"
-			local fg_dark = "#ad4096"
+			local bg_search = "#1a241c"
+			local bg_visual = "#445813" --visual mode highlights
+			local fg = "#b2f702"
+			local fg_dark = "#d3d3d0" --brackets
 			local fg_gutter = "#627E97"
-			local border = "#d1cc34"
+			local border = "#cb08b9"
 			local cursor = "#F1C4E0"
 
 			require("tokyonight").setup({
@@ -137,13 +188,13 @@ return {
 					colors.fg_gutter = fg_gutter
 					colors.fg_sidebar = fg_dark
 					colors.cursor = cursor
-					colors.green = "#e084c0"
-					colors.cyan = "#e87731"
-					colors.yellow = "#8897F4"
+					colors.green = "#f5f322" --things that are in " "
+					colors.cyan = "#e87731" --import export
+					colors.yellow = "#8897F4" --params
 					-- colors.red = "#B52A5B"
-					colors.red = "#f564c2"
+					colors.red = "#fced8b" --tsx <tag>
 					colors.magenta = "#f5f122"
-					colors.blue = "#bd93f9"
+					colors.blue = "#fd93f9" --function name
 					colors.white = "#F1C4E0"
 				end,
 			})
