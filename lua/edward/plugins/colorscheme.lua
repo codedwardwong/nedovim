@@ -160,7 +160,7 @@ return {
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
 			local bg = "#171c18"
-			local bg_dark = "#011423"
+			local bg_dark = "#141c16" -- include nvim-tree color
 			local bg_highlight = "#281447"
 			local bg_search = "#1a241c"
 			local bg_visual = "#445813" --visual mode highlights
