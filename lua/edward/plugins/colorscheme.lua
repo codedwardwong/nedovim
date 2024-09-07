@@ -10,6 +10,38 @@
 -- 		require("onedark").load()
 -- 	end,
 -- }
+return {
+	"rebelot/kanagawa.nvim",
+	lazy = false,
+	priority = 1000,
+	config = function(_, opts)
+		require("kanagawa").setup({
+			compile = false, -- enable compiling the colorscheme
+			undercurl = true, -- enable undercurls
+			commentStyle = { italic = true },
+			functionStyle = {},
+			keywordStyle = { italic = true },
+			statementStyle = { bold = true },
+			typeStyle = {},
+			transparent = false, -- do not set background color
+			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+			terminalColors = true, -- define vim.g.terminal_color_{0,17}
+			colors = { -- add/modify theme and palette colors
+				palette = {},
+				theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+			},
+			overrides = function(colors) -- add/modify highlights
+				return {}
+			end,
+			theme = "wave", -- Load "wave" theme when 'background' option is not set
+			background = { -- map the value of 'background' option to a theme
+				dark = "wave", -- try "dragon" !
+				light = "lotus",
+			},
+		})
+		require("kanagawa").load()
+	end,
+}
 -- return {
 --   "folke/tokyonight.nvim",
 --   lazy = false,
@@ -151,56 +183,56 @@
 -- 			-- load the colorscheme here
 -- 			vim.cmd([[colorscheme tokyonight]])
 -- 		end,
--- 	},
+-- },
 -- }
 
-return {
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			local bg = "#171c18"
-			local bg_dark = "#141c16" -- include nvim-tree color
-			local bg_highlight = "#281447"
-			local bg_search = "#1a241c"
-			local bg_visual = "#445813" --visual mode highlights
-			local fg = "#b2f702"
-			local fg_dark = "#d3d3d0" --brackets
-			local fg_gutter = "#627E97"
-			local border = "#cb08b9"
-			local cursor = "#F1C4E0"
-
-			require("tokyonight").setup({
-				style = "night",
-				on_colors = function(colors)
-					colors.bg = bg
-					colors.bg_highlight = bg_highlight
-					colors.bg_dark = bg_dark
-					colors.bg_float = bg_dark
-					colors.bg_sidebar = bg_dark
-					colors.bg_statusline = bg_dark
-					colors.bg_search = bg_search
-					colors.bg_visual = bg_visual
-					colors.border = border
-					colors.fg = fg
-					colors.fg_dark = fg_dark
-					colors.fg_float = fg
-					colors.fg_gutter = fg_gutter
-					colors.fg_sidebar = fg_dark
-					colors.cursor = cursor
-					colors.green = "#f5f322" --things that are in " "
-					colors.cyan = "#e87731" --import export
-					colors.yellow = "#8897F4" --params
-					-- colors.red = "#B52A5B"
-					colors.red = "#fced8b" --tsx <tag>
-					colors.magenta = "#f5f122"
-					colors.blue = "#fd93f9" --function name
-					colors.white = "#F1C4E0"
-				end,
-			})
-
-			-- load the colorscheme here
-			vim.cmd([[colorscheme tokyonight]])
-		end,
-	},
-}
+-- return {
+-- 	{
+-- 		"folke/tokyonight.nvim",
+-- 		priority = 1000, -- make sure to load this before all the other start plugins
+-- 		config = function()
+-- 			local bg = "#171c18"
+-- 			local bg_dark = "#141c16" -- include nvim-tree color
+-- 			local bg_highlight = "#281447"
+-- 			local bg_search = "#1a241c"
+-- 			local bg_visual = "#445813" --visual mode highlights
+-- 			local fg = "#b2f702"
+-- 			local fg_dark = "#d3d3d0" --brackets
+-- 			local fg_gutter = "#627E97"
+-- 			local border = "#cb08b9"
+-- 			local cursor = "#F1C4E0"
+--
+-- 			require("tokyonight").setup({
+-- 				style = "night",
+-- 				on_colors = function(colors)
+-- 					colors.bg = bg
+-- 					colors.bg_highlight = bg_highlight
+-- 					colors.bg_dark = bg_dark
+-- 					colors.bg_float = bg_dark
+-- 					colors.bg_sidebar = bg_dark
+-- 					colors.bg_statusline = bg_dark
+-- 					colors.bg_search = bg_search
+-- 					colors.bg_visual = bg_visual
+-- 					colors.border = border
+-- 					colors.fg = fg
+-- 					colors.fg_dark = fg_dark
+-- 					colors.fg_float = fg
+-- 					colors.fg_gutter = fg_gutter
+-- 					colors.fg_sidebar = fg_dark
+-- 					colors.cursor = cursor
+-- 					colors.green = "#f5f322" --things that are in " "
+-- 					colors.cyan = "#e87731" --import export
+-- 					colors.yellow = "#8897F4" --params
+-- 					-- colors.red = "#B52A5B"
+-- 					colors.red = "#fced8b" --tsx <tag>
+-- 					colors.magenta = "#f5f122"
+-- 					colors.blue = "#fd93f9" --function name
+-- 					colors.white = "#F1C4E0"
+-- 				end,
+-- 			})
+--
+-- 			-- load the colorscheme here
+-- 			vim.cmd([[colorscheme tokyonight]])
+-- 		end,
+-- 	},
+-- }
