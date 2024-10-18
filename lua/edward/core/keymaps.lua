@@ -18,10 +18,10 @@ keymap.set("i", "aa", "()=>{}", { desc = "Create blank arrow function" })
 -- keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management
+keymap.set("n", "<leader>+", "<cmd>vertical resize +10<CR>", { desc = "Increment vertical window size by 10" }) -- increment
+keymap.set("n", "<leader>-", "<cmd>vertical resize -10<CR>", { desc = "Decrement vertical window size by 10" }) -- decrement
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height

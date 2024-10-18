@@ -35,6 +35,9 @@ return {
 				opts.desc = "Show LSP definitions"
 				keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
+				opts.desc = "Jump to LSP definition"
+				keymap.set("n", "<leader>gd", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", opts) -- jump to definition
+
 				opts.desc = "Show LSP implementations"
 				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
 

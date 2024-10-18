@@ -10,38 +10,38 @@
 -- 		require("onedark").load()
 -- 	end,
 -- }
-return {
-	"rebelot/kanagawa.nvim",
-	lazy = false,
-	priority = 1000,
-	config = function(_, opts)
-		require("kanagawa").setup({
-			compile = false, -- enable compiling the colorscheme
-			undercurl = true, -- enable undercurls
-			commentStyle = { italic = true },
-			functionStyle = {},
-			keywordStyle = { italic = true },
-			statementStyle = { bold = true },
-			typeStyle = {},
-			transparent = false, -- do not set background color
-			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
-			terminalColors = true, -- define vim.g.terminal_color_{0,17}
-			colors = { -- add/modify theme and palette colors
-				palette = {},
-				theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-			},
-			overrides = function(colors) -- add/modify highlights
-				return {}
-			end,
-			theme = "wave", -- Load "wave" theme when 'background' option is not set
-			background = { -- map the value of 'background' option to a theme
-				dark = "wave", -- try "dragon" !
-				light = "lotus",
-			},
-		})
-		require("kanagawa").load()
-	end,
-}
+-- return {
+-- 	"rebelot/kanagawa.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function(_, opts)
+-- 		require("kanagawa").setup({
+-- 			compile = false, -- enable compiling the colorscheme
+-- 			undercurl = true, -- enable undercurls
+-- 			commentStyle = { italic = true },
+-- 			functionStyle = {},
+-- 			keywordStyle = { italic = true },
+-- 			statementStyle = { bold = true },
+-- 			typeStyle = {},
+-- 			transparent = false, -- do not set background color
+-- 			dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+-- 			terminalColors = true, -- define vim.g.terminal_color_{0,17}
+-- 			colors = { -- add/modify theme and palette colors
+-- 				palette = {},
+-- 				theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+-- 			},
+-- 			overrides = function(colors) -- add/modify highlights
+-- 				return {}
+-- 			end,
+-- 			theme = "wave", -- Load "wave" theme when 'background' option is not set
+-- 			background = { -- map the value of 'background' option to a theme
+-- 				dark = "wave", -- try "dragon" !
+-- 				light = "lotus",
+-- 			},
+-- 		})
+-- 		require("kanagawa").load()
+-- 	end,
+-- }
 -- return {
 --   "folke/tokyonight.nvim",
 --   lazy = false,
@@ -135,6 +135,19 @@ return {
 -- 	},
 -- }
 
+return {
+	"atelierbram/Base2Tone-nvim",
+	lazy = false,
+	priority = 1000,
+	opts = {
+		transparent = true,
+	},
+	config = function(_, opts)
+		require("base2tone_field_dark").setup(opts)
+		require("base2tone_field_dark").load()
+	end,
+}
+
 -- return {
 -- 	{
 -- 		"folke/tokyonight.nvim",
@@ -153,6 +166,7 @@ return {
 --
 -- 			require("tokyonight").setup({
 -- 				style = "night",
+-- 				transparent = true,
 -- 				on_colors = function(colors)
 -- 					colors.bg = bg
 -- 					colors.bg_highlight = bg_highlight
@@ -183,7 +197,7 @@ return {
 -- 			-- load the colorscheme here
 -- 			vim.cmd([[colorscheme tokyonight]])
 -- 		end,
--- },
+-- 	},
 -- }
 
 -- return {
