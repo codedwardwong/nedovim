@@ -1,15 +1,58 @@
 -- return {
--- 	"navarasu/onedark.nvim",
+-- 	"ribru17/bamboo.nvim",
 -- 	lazy = false,
 -- 	priority = 1000,
--- 	opts = {
--- 		transparent = true,
--- 	},
--- 	config = function(_, opts)
--- 		require("onedark").setup(opts)
--- 		require("onedark").load()
+-- 	config = function()
+-- 		require("bamboo").setup({
+-- 			-- optional configuration here
+-- 		})
+-- 		require("bamboo").load()
 -- 	end,
 -- }
+
+-- return {
+-- 	"gremble0/yellowbeans.nvim",
+-- 	priority = 1000, -- Theme should load before most other plugins
+-- 	config = function()
+-- 		vim.cmd.colorscheme("yellowbeans")
+-- 	end,
+-- }
+
+-- return {
+-- 	"neanias/everforest-nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("everforest").setup({
+-- 			-- options
+-- 		})
+-- 		require("everforest").load()
+-- 	end,
+-- }
+
+-- return {
+-- 	"iruzo/matrix-nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	transparent = true,
+-- 	config = function()
+-- 		require("matrix").set()
+-- 	end,
+-- }
+
+return {
+	"navarasu/onedark.nvim",
+	lazy = false,
+	priority = 1000,
+	opts = {
+		transparent = true,
+	},
+	config = function(_, opts)
+		require("onedark").setup(opts)
+		require("onedark").load()
+	end,
+}
+
 -- return {
 -- 	"rebelot/kanagawa.nvim",
 -- 	lazy = false,
@@ -135,18 +178,15 @@
 -- 	},
 -- }
 
-return {
-	"atelierbram/Base2Tone-nvim",
-	lazy = false,
-	priority = 1000,
-	opts = {
-		transparent = true,
-	},
-	config = function(_, opts)
-		require("base2tone_field_dark").setup(opts)
-		require("base2tone_field_dark").load()
-	end,
-}
+-- return {
+-- 	"atelierbram/Base2Tone-nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("base2tone_mall_dark").setup()
+-- 		require("base2tone_mall_dark").load()
+-- 	end,
+-- }
 
 -- return {
 -- 	{
@@ -167,6 +207,7 @@ return {
 -- 			require("tokyonight").setup({
 -- 				style = "night",
 -- 				transparent = true,
+-- 				on_highlights = function(highlights, colors) end,
 -- 				on_colors = function(colors)
 -- 					colors.bg = bg
 -- 					colors.bg_highlight = bg_highlight

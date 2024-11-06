@@ -54,6 +54,9 @@ return {
 			options = {
 				theme = my_lualine_theme,
 			},
+			-- options = {
+			-- 	theme = require("lualine.themes.yellowbeans"), -- OR: "lualine.themes.yellowbeans-monochrome"
+			-- },
 			sections = {
 				lualine_x = {
 					{
