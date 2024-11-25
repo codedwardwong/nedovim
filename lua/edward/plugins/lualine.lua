@@ -51,9 +51,9 @@ return {
 
 		-- configure lualine with modified theme
 		lualine.setup({
-			options = {
-				theme = my_lualine_theme,
-			},
+			-- options = {
+			-- 	theme = my_lualine_theme,
+			-- },
 			-- options = {
 			-- 	theme = require("lualine.themes.yellowbeans"), -- OR: "lualine.themes.yellowbeans-monochrome"
 			-- },
@@ -62,7 +62,7 @@ return {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
+						-- color = { fg = "#ff9e64" },
 					},
 					-- { "encoding" },
 					-- { "fileformat" },
