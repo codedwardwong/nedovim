@@ -19,10 +19,16 @@ return {
 
 		telescope.setup({
 			defaults = {
-				path_display = function(opts, path)
-					local tail = require("telescope.utils").path_tail(path)
-					return string.format("%s (%s)", tail, path), { { { 1, #tail }, "Constant" } }
-				end,
+				preview_cutoff = 1,
+				layout_strategy = "vertical",
+				layout_config = {
+					vertical = { width = 0.9, height = 0.9, preview_height = 0.5 },
+				},
+				path_display = { "truncate" },
+				-- path_display = function(opts, path)
+				-- 	local tail = require("telescope.utils").path_tail(path)
+				-- 	return string.format("%s (%s)", tail, path), { { { 1, #tail }, "Constant" } }
+				-- end,
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
