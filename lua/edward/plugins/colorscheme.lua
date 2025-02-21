@@ -1,34 +1,34 @@
--- return {
--- 	"ribru17/bamboo.nvim",
--- 	lazy = false,
--- 	priority = 1000,
--- 	config = function()
--- 		require("bamboo").setup({
--- 			-- optional configuration here
--- 		})
--- 		require("bamboo").load()
--- 	end,
--- }
-
 return {
-	"EdenEast/nightfox.nvim",
+	"ribru17/bamboo.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("nightfox").setup({
-			styles = {
-				comments = "italic",
-				keywords = "bold",
-				functions = "italic,bold",
-			},
-			colors = {
-				red = "#FF5370",
-				bg_alt = "#2E3440",
-			},
+		require("bamboo").setup({
+			-- optional configuration here
 		})
-		require("nightfox").load()
+		require("bamboo").load()
 	end,
 }
+
+-- return {
+-- "EdenEast/nightfox.nvim",
+-- lazy = false,
+-- priority = 1000,
+-- config = function()
+-- 	require("nightfox").setup({
+-- 		styles = {
+-- 			comments = "italic",
+-- 			keywords = "bold",
+-- 			functions = "italic,bold",
+-- 		},
+-- 		colors = {
+-- 			red = "#FF5370",
+-- 			bg_alt = "#2E3440",
+-- 		},
+-- 	})
+-- 	require("nightfox").load()
+-- end,
+-- }
 
 -- return {
 -- 	"gremble0/yellowbeans.nvim",
