@@ -1,14 +1,25 @@
 return {
-	"ribru17/bamboo.nvim",
-	lazy = false,
+	"catppuccin/nvim",
+	name = "catppuccin",
 	priority = 1000,
 	config = function()
-		require("bamboo").setup({
-			-- optional configuration here
-		})
-		require("bamboo").load()
+		require("catppuccin").setup()
+
+		-- setup must be called before loading
+		vim.cmd.colorscheme("catppuccin")
 	end,
 }
+-- return {
+-- 	"ribru17/bamboo.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("bamboo").setup({
+-- 			-- optional configuration here
+-- 		})
+-- 		require("bamboo").load()
+-- 	end,
+-- }
 
 -- return {
 -- "EdenEast/nightfox.nvim",

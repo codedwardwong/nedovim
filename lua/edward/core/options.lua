@@ -44,3 +44,4 @@ opt.swapfile = false
 --fold
 opt.foldmethod = "indent" -- fold based on indent level
 opt.foldlevel = 99 -- open all folds by default
+opt.foldenable = false -- don't fold by default
